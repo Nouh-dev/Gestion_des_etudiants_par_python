@@ -1,6 +1,15 @@
 # students management 
+from openpyxl import Workbook
 n = int(input("Enter numbers students: "))
 students = []
+
+def save_excel():
+    page_excel = Workbook()
+    page = page_excel.active
+    page.append(["name","number","division","note"])
+    for i in students:
+        page.append([i["name"],i["number"],i["division"],i["note"]])
+    page_excel.save("save password.xlsx")
 
 for i in range(n):
     name = input("Enter name: ")
@@ -21,7 +30,7 @@ for s in students:
     print(s)
 
 while True:
-    choix = int(input("\nDelete (1) | Add (2) | Search (3): "))
+    choix = int(input("\nDelete (1) | Add (2) | Search (3): | EXIT(0) : "))
 
     # DELETE
     if choix == 1:
@@ -61,6 +70,12 @@ while True:
                 break
         else:
             print("Not found !!")
+
+    #exit
+    elif choix == 0:
+        save_excel()
+        print("good bye")
+        break
 
     # INVALID
     else:
