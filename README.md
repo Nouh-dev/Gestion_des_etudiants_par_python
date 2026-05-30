@@ -1,29 +1,49 @@
-#  Student Management System (Python)
+# Student Management System
 
-##  Description
-This is a simple Python project for managing students.  
-It allows you to add, delete, search, and display students using a menu-driven system.
+## Description
 
----
+Student Management System is a Python console application that allows users to manage student records efficiently. The application supports adding, deleting, and searching for students while storing information such as name, student number, division, and grade.
 
-##  Features
+At the end of the program, all student data is automatically exported to an Excel file using the OpenPyXL library.
 
--  Add students
--  Display all students
--  Delete a student by number
--  Search a student by name
--  Interactive menu loop
+## Features
 
----
+* Add new students
+* Delete students by student number
+* Search students by name
+* Display all student records
+* Export data to an Excel file (.xlsx)
 
-##  Data Structure
+## Technologies Used
 
-Each student is stored as a Python dictionary:
+* Python
+* OpenPyXL
 
-```python
-{
-    "name": "Ali",
-    "number": 101,
-    "division": "GI",
-    "note": 15.5
-}
+## Excel Export
+
+The application generates an Excel file containing:
+
+* Student Name
+* Student Number
+* Division
+* Grade
+
+## How to Run
+
+1. Install OpenPyXL:
+
+```bash
+pip install openpyxl
+```
+
+2. Run the program:
+
+```bash
+python main.py
+```
+
+3. Enter the number of students and manage records through the menu.
+
+## Author
+
+Nouh Marzak
